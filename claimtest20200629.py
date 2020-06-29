@@ -17,8 +17,8 @@ def avg_feature_vector(sentence, model, num_features, index2word_set):
         if word in index2word_set:
             n_words += 1
             feature_vec = np.add(feature_vec, model[word])
-        if (n_words > 0):
-            feature_vec = np.divide(feature_vec, n_words)
+    if (n_words > 0):
+        feature_vec = np.divide(feature_vec, n_words)
     return feature_vec
 
 
